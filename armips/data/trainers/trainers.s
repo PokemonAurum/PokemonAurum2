@@ -46,14 +46,14 @@ trainerdata 1, "Silver"
         // mon 0
         ivs 80
         abilityslot 0
-        level 16
+        level 17
         pokemon SPECIES_SNORUNT
         ballseal 0
 
         // mon 1
         ivs 80
         abilityslot 0
-        level 17
+        level 18
         pokemon SPECIES_CUTIEFLY
         ballseal 0
 
@@ -61,7 +61,7 @@ trainerdata 1, "Silver"
         ivs 90
         abilityslot 0
         level 19
-        pokemon SPECIES_
+        pokemon SPECIES_SIZZLIPEDE
         ballseal 0
 
         // mon 3
@@ -137,16 +137,23 @@ trainerdata 4, "Wade"
         // mon 0
         ivs 0
         abilityslot 0
-        level 2
+        level 3
         pokemon SPECIES_CATERPIE
-        moves MOVE_, MOVE_NONE, MOVE_NONE, MOVE_NONE
+        move MOVE_TACKLE
+        move MOVE_ELECTROWEB
+        move MOVE_STRING_SHOT
+        move MOVE_NONE
         ballseal 0
 
         // mon 1
         ivs 0
         abilityslot 0
-        level 3
+        level 4
         pokemon SPECIES_CATERPIE
+        move MOVE_TACKLE
+        move MOVE_ELECTROWEB
+        move MOVE_STRING_SHOT
+        move MOVE_NONE
         ballseal 0
 
         // mon 2
@@ -154,13 +161,21 @@ trainerdata 4, "Wade"
         abilityslot 0
         level 4
         pokemon SPECIES_SURSKIT
+        move MOVE_BUBBLE
+        move MOVE_ELECTROWEB
+        move MOVE_STRING_SHOT
+        move MOVE_STRUGGLE_BUG
         ballseal 0
 
         // mon 3
         ivs 0
         abilityslot 0
-        level 5
+        level 6
         pokemon SPECIES_KARRABLAST
+        move MOVE_VICE_GRIP
+        move MOVE_HARDEN
+        move MOVE_STRING_SHOT
+        move MOVE_MUD_SLAP
         ballseal 0
     endparty
 
@@ -591,7 +606,7 @@ trainerdata 18, "Justin"
         ballseal 0
     endparty
 
-trainerdata 19, "Mickey"
+trainerdata 19, "Mick"
     trainermontype TRAINER_DATA_TYPE_NOTHING | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass TRAINERCLASS_BIKER
     nummons 4
@@ -608,8 +623,8 @@ trainerdata 19, "Mickey"
         ivs 100
         abilityslot 0
         level 26
-        pokemon SPECIES_QWILFISH_HISUIAN
-        abilityslot 0
+        pokemon SPECIES_QWILFISH
+        ability ABILITY_INTIMIDATE
         shinylock 1
         ballseal 0
 
@@ -617,8 +632,8 @@ trainerdata 19, "Mickey"
         ivs 100
         abilityslot 0
         level 25
-        pokemon SPECIES_GRIMER_ALOLA
-        abilityslot 0
+        pokemon SPECIES_GRIMER
+        ability ABILITY_POISON_TOUCH
         shinylock 1
         ballseal 0
 
@@ -627,7 +642,7 @@ trainerdata 19, "Mickey"
         abilityslot 0
         level 25
         pokemon SPECIES_CLODSIRE
-        abilityslot 0
+        ability ABILITY_UNAWARE
         shinylock 1
         ballseal 0
 
@@ -635,7 +650,7 @@ trainerdata 19, "Mickey"
         ivs 120
         abilityslot 0
         level 27
-        pokemon SPECIES_SNEASEL_HISUIAN
+        pokemon SPECIES_SNEASEL
         ability ABILITY_INNER_FOCUS
         shinylock 0
         ballseal 0
@@ -8554,11 +8569,11 @@ trainerdata 261, "Blue"
         ivs 250
         abilityslot 0
         level 64
-        pokemon SPECIES_EXEGGUTOR_ALOLA
+        pokemon SPECIES_EXEGGUTOR
         item ITEM_SITRUS_BERRY
         move MOVE_LEAF_STORM
         move MOVE_SUBSTITUTE
-        move MOVE_DRACO_METEOR
+        move MOVE_PSYCHIC
         move MOVE_TRICK_ROOM
         ball ITEM_NEST_BALL
         ballseal 6
@@ -8606,7 +8621,7 @@ trainerdata 261, "Blue"
         ivs 250
         abilityslot 32
         level 68
-        pokemon SPECIES_TAUROS_PALDEA
+        pokemon SPECIES_TAUROS
         item ITEM_SITRUS_BERRY
         move MOVE_CLOSE_COMBAT
         move MOVE_EARTHQUAKE
@@ -8660,7 +8675,7 @@ trainerdata 262, "Mickey"
         ivs 100
         abilityslot 0
         level 30
-        pokemon SPECIES_SNEASEL_HISUIAN
+        pokemon SPECIES_DUSTOX
         ballseal 0
 
         // mon 3
