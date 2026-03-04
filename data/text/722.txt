@@ -310,4 +310,17 @@ Resists all damage when\nHP is full.
 Reduces effects of weather\nand terrain to zero.
 Poison-inflicting moves\nwill also cause confusion.
 Boosts Sp. Atk after\nknocking out with\na special move.
-Boosts the power of\nkicking moves by 25%.
+Boosts the power of\nkicking moves by 25%.Boosts Normal-type moves\nwhen HP is low.
+Boosts Fighting-type moves\nwhen HP is low.
+Boosts Flying-type moves\nwhen HP is low.
+Boosts Poison-type moves\nwhen HP is low.
+Boosts Ground-type moves\nwhen HP is low.
+Boosts Rock-type moves\nwhen HP is low.
+Boosts Steel-type moves\nwhen HP is low.
+Boosts Electric-type moves\nwhen HP is low.
+Boosts Psychic-type moves\nwhen HP is low.
+Boosts Ice-type moves\nwhen HP is low.
+Boosts Dragon-type moves\nwhen HP is low.
+Boosts Dark-type moves\nwhen HP is low.
+Boosts Ghost-type moves\nwhen HP is low.
+Boosts Fairy-type moves\nwhen HP is low.
