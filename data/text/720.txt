@@ -317,7 +317,7 @@ Updraft
 Venom
 Tremor
 Geolith
-Temper
+Tempered
 Overcharged
 ESP
 Snowstorm
@@ -325,3 +325,5 @@ Arcane
 Malice
 Phantasm
 Enchanted
+Headgear
+Evaporate

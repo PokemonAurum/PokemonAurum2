@@ -105,6 +105,7 @@ BOOL BattleController_CheckAbilityFailures2(struct BattleSystem *bsys UNUSED, st
 BOOL CalcDamageAndSetMoveStatusFlags(struct BattleSystem *bsys, struct BattleStruct *ctx, int defender);
 BOOL BattleController_CheckTypeImmunity(struct BattleSystem *bsys, struct BattleStruct *ctx, int defender);
 BOOL BattleController_CheckLevitate(struct BattleSystem *bsys UNUSED, struct BattleStruct *ctx, int defender);
+BOOL BattleController_CheckEvaporate(struct BattleSystem *bsys UNUSED, struct BattleStruct *ctx, int defender);
 BOOL BattleController_CheckAirBalloonTelekinesisMagnetRise(struct BattleSystem *bsys UNUSED, struct BattleStruct *ctx, int defender);
 BOOL BattleController_CheckSafetyGoggles(struct BattleSystem *bsys UNUSED, struct BattleStruct *ctx, int defender);
 BOOL BattleController_CheckAbilityFailures3(struct BattleSystem *bsys UNUSED, struct BattleStruct *ctx, int defender);
@@ -839,6 +840,14 @@ void __attribute__((section (".init"))) BattleController_BeforeMove(struct Battl
 #endif
 
             LoopCheckFunctionForSpreadMove(bsys, ctx, BattleController_CheckLevitate);
+            ctx->wb_seq_no++;
+            FALLTHROUGH;
+        }
+        case BEFORE_MOVE_STATE_EVAPORATE: {
+#ifdef DEBUG_BEFORE_MOVE_LOGIC
+            debug_printf("In BEFORE_MOVE_STATE_EVAPORATE\n");
+#endif
+            LoopCheckFunctionForSpreadMove(bsys, ctx, BattleController_CheckEvaporate);
             ctx->wb_seq_no++;
             FALLTHROUGH;
         }
@@ -2468,6 +2477,22 @@ BOOL BattleController_CheckLevitate(struct BattleSystem *bsys UNUSED, struct Bat
         BattleController_ResetGeneralMoveFailureFlags(ctx, ctx->attack_client, TRUE);
         ctx->battlerIdTemp = defender;
         LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_LEVITATE_FAIL);
+        ctx->next_server_seq_no = ctx->server_seq_no;
+        ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+// TODO: Handle
+BOOL BattleController_CheckEvaporate(struct BattleSystem *bsys UNUSED, struct BattleStruct *ctx, int defender) {
+    if ((MoldBreakerAbilityCheck(ctx, ctx->attack_client, defender, ABILITY_EVAPORATE) == TRUE)
+    && (ctx->move_type == TYPE_WATER)
+    && (ctx->moveTbl[ctx->current_move_index].split != SPLIT_STATUS)) {
+        ctx->moveStatusFlagForSpreadMoves[defender] = MOVE_STATUS_FLAG_LEVITATE_MISS;
+        BattleController_ResetGeneralMoveFailureFlags(ctx, ctx->attack_client, TRUE);
+        ctx->battlerIdTemp = defender;
+        LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_UNAFFECTED);
         ctx->next_server_seq_no = ctx->server_seq_no;
         ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
         return TRUE;
