@@ -1121,6 +1121,8 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
             // handle Swarm
             if ((movetype == TYPE_BUG) && (AttackingMon.ability == ABILITY_SWARM) && (AttackingMon.hp <= AttackingMon.maxhp / 3)) {
                 attackModifier = QMul_RoundUp(attackModifier, UQ412__1_5);
+            }
+
             // handle Resolve
             if ((movetype == TYPE_NORMAL) && (AttackingMon.ability == ABILITY_RESOLVE) && (AttackingMon.hp <= AttackingMon.maxhp / 3)) {
                 attackModifier = QMul_RoundUp(attackModifier, UQ412__1_5);
@@ -1176,7 +1178,6 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
             // handle Enchanted
             if ((movetype == TYPE_FAIRY) && (AttackingMon.ability == ABILITY_ENCHANTED) && (AttackingMon.hp <= AttackingMon.maxhp / 3)) {
                 attackModifier = QMul_RoundUp(attackModifier, UQ412__1_5);
-            }
             }
 
             // handle Flash Fire
@@ -1270,6 +1271,11 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
             // https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9469856
             if ((MoldBreakerAbilityCheckInternal(attacker, defender, AttackingMon.ability, DefendingMon.ability, moveno, movesplit, ABILITY_PURIFYING_SALT)) && (movetype == TYPE_GHOST)) {
                 attackModifier = QMul_RoundUp(attackModifier, UQ412__0_5);
+            }
+            
+            // handle Headgear
+            if ((MoldBreakerAbilityCheckInternal(attacker, defender, AttackingMon.ability, DefendingMon.ability, moveno, movesplit, ABILITY_HEADGEAR) == TRUE) && (movetype == TYPE_FIGHTING)) {
+                attackModifier = QMul_RoundUp(attackModifier, UQ412__0_75);
             }
         }
     }

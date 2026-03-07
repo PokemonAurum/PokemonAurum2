@@ -324,3 +324,4 @@ Boosts Dragon-type moves\nwhen HP is low.
 Boosts Dark-type moves\nwhen HP is low.
 Boosts Ghost-type moves\nwhen HP is low.
 Boosts Fairy-type moves\nwhen HP is low.
+Reduces damage from\nFighting-type moves.

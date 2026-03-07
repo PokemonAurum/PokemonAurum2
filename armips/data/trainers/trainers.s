@@ -19531,7 +19531,7 @@ trainerdata 579, "Ernest"
 trainerdata 580, "Pedro"
     trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES
     trainerclass TRAINERCLASS_CAMPER
-    nummons 1
+    nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -19542,15 +19542,27 @@ trainerdata 580, "Pedro"
 
     party 580
         // mon 0
-        ivs 0
+        ivs 150
         abilityslot 32
-        level 45
-        pokemon SPECIES_LINOONE
-        item ITEM_SITRUS_BERRY
+        level 51
+        pokemon SPECIES_OBSTAGOON
+        item ITEM_FLAME_ORB
         move MOVE_BELLY_DRUM
         move MOVE_SLASH
-        move MOVE_DIG
-        move MOVE_SURF
+        move MOVE_STOMPING_TANTRUM
+        move MOVE_SUCKER_PUNCH
+        ballseal 0
+
+        // mon 1
+        ivs 150
+        abilityslot 1
+        level 52
+        pokemon SPECIES_GRAPPLOCT
+        item ITEM_FIGHTING_GEM
+        move MOVE_BULK_UP
+        move MOVE_CLOSE_COMBAT
+        move MOVE_ICE_PUNCH
+        move MOVE_SUCKER_PUNCH
         ballseal 0
     endparty
 
@@ -19568,7 +19580,7 @@ trainerdata 581, "Adrian"
 
 party 581
     // mon 0
-    ivs 0
+    ivs 150
     abilityslot 0
     level 52
     pokemon SPECIES_BRELOOM
