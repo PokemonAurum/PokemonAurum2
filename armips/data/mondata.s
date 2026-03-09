@@ -23378,6 +23378,231 @@ mondata SPECIES_MEGA_DIANCIE, "-----"
     runchance 0
     colorflip 0, 0
 
+mondata SPECIES_MEGA_RAICHU_X, "-----"
+    basestats 60, 135, 95, 90, 95, 110
+    types TYPE_ELECTRIC, TYPE_ELECTRIC
+    catchrate 75
+    baseexp 218
+    evyields 0, 2, 0, 0, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 63
+    eggcycles 10
+    basefriendship 50
+    growthrate GROWTH_MEDIUM_FAST
+    egggroups EGG_GROUP_FIELD, EGG_GROUP_FAIRY
+    abilities ABILITY_LEVITATE, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_VICTREEBEL, "-----"
+    basestats 80, 135, 85, 70, 100, 80
+    types TYPE_GRASS, TYPE_POISON
+    catchrate 45
+    baseexp 191
+    evyields 0, 3, 0, 0, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_GRASS, EGG_GROUP_NONE
+    abilities ABILITY_CHLOROPHYLL, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_FERALIGATR, "-----"
+    basestats 85, 160, 125, 78, 93, 89
+    types TYPE_WATER, TYPE_DRAGON
+    catchrate 45
+    baseexp 239
+    evyields 0, 3, 0, 0, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 31
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_MONSTER, EGG_GROUP_WATER_1
+    abilities ABILITY_SHEER_FORCE, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_SKARMORY, "-----"
+    basestats 65, 140, 110, 40, 100, 110
+    types TYPE_STEEL, TYPE_FLYING
+    catchrate 25
+    baseexp 228
+    evyields 0, 0, 2, 0, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 25
+    basefriendship 35
+    growthrate GROWTH_SLOW
+    egggroups EGG_GROUP_FLYING, EGG_GROUP_NONE
+    abilities ABILITY_STURDY, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_STARAPTOR, "-----"
+    basestats 85, 140, 100, 90, 60, 110
+    types TYPE_FIGHTING, TYPE_FLYING
+    catchrate 45
+    baseexp 218
+    evyields 0, 3, 0, 0, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_FLYING, EGG_GROUP_NONE
+    abilities ABILITY_RECKLESS, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_SCOLIPEDE, "-----"
+    basestats 60, 130, 89, 55, 69, 130
+    types TYPE_BUG, TYPE_POISON
+    catchrate 45
+    baseexp 218
+    evyields 0, 0, 0, 0, 0, 3
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_BUG, EGG_GROUP_NONE
+    abilities ABILITY_SPEED_BOOST, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_CHANDELURE, "-----"
+    basestats 60, 75, 110, 80, 175, 90
+    types TYPE_GHOST, TYPE_FIRE
+    catchrate 45
+    baseexp 234
+    evyields 0, 0, 0, 3, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_FAST
+    egggroups EGG_GROUP_AMORPHOUS, EGG_GROUP_NONE
+    abilities ABILITY_FLASH_FIRE, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_CHESNAUGHT, "-----"
+    basestats 88, 137, 172, 64, 115, 44
+    types TYPE_GRASS, TYPE_FIGHTING
+    catchrate 45
+    baseexp 239
+    evyields 0, 0, 3, 0, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 31
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_FIELD, EGG_GROUP_GRASS
+    abilities ABILITY_OVERGROW, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_DELPHOX, "-----"
+    basestats 75, 69, 72, 114, 159, 134
+    types TYPE_FIRE, TYPE_PSYCHIC
+    catchrate 45
+    baseexp 239
+    evyields 0, 0, 0, 3, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 31
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE
+    abilities ABILITY_BLAZE, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_GRENINJA, "-----"
+    basestats 72, 125, 77, 95, 133, 142
+    types TYPE_WATER, TYPE_DARK
+    catchrate 45
+    baseexp 239
+    evyields 0, 0, 0, 0, 0, 3
+    items ITEM_NONE, ITEM_NONE
+    genderratio 31
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_WATER_1, EGG_GROUP_HUMAN_LIKE
+    abilities ABILITY_TORRENT, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_PYROAR, "-----"
+    basestats 86, 108, 88, 106, 100, 106
+    types TYPE_FIRE, TYPE_NORMAL
+    catchrate 65
+    baseexp 218
+    evyields 0, 0, 0, 1, 1, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_FIELD, EGG_GROUP_NONE
+    abilities ABILITY_UNNERVE, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_DRAGALGE, "-----"
+    basestats 65, 85, 105, 44, 132, 163
+    types TYPE_POISON, TYPE_DRAGON
+    catchrate 55
+    baseexp 218
+    evyields 0, 0, 0, 0, 3, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_FAST
+    egggroups EGG_GROUP_WATER_1, EGG_GROUP_DRAGON
+    abilities ABILITY_POISON_POINT, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_HAWLUCHA, "-----"
+    basestats 78, 137, 100, 74, 93, 118
+    types TYPE_FIGHTING, TYPE_FLYING
+    catchrate 45
+    baseexp 218
+    evyields 0, 0, 0, 0, 0, 3
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 20
+    basefriendship 70
+    growthrate GROWTH_MEDIUM_FAST
+    egggroups EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING
+    abilities ABILITY_UNBURDEN, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_FALINKS, "-----"
+    basestats 65, 150, 120, 70, 75, 115
+    types TYPE_FIGHTING, TYPE_FIGHTING
+    catchrate 45
+    baseexp 218
+    evyields 0, 3, 0, 0, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 255
+    eggcycles 25
+    basefriendship 50
+    growthrate GROWTH_MEDIUM_FAST
+    egggroups EGG_GROUP_HUMAN_LIKE, EGG_GROUP_NONE
+    abilities ABILITY_BATTLE_ARMOR, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
+mondata SPECIES_MEGA_GLIMMORA, "-----"
+    basestats 83, 90, 105, 130, 150, 96
+    types TYPE_ROCK, TYPE_POISON
+    catchrate 25
+    baseexp 250
+    evyields 0, 0, 0, 0, 3, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 127
+    eggcycles 20
+    basefriendship 50
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_MINERAL, EGG_GROUP_NONE
+    abilities ABILITY_CORROSION, ABILITY_NONE
+    runchance 0
+    colorflip 0, 0
 mondata SPECIES_GROUDON_PRIMAL, "-----"
     basestats 100, 180, 160, 90, 150, 90
     types TYPE_GROUND, TYPE_FIRE

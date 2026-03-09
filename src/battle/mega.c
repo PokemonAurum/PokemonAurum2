@@ -12,7 +12,7 @@
 struct MegaStruct
 {
     u16 monindex;
-    u16 itemindex:11;
+    u16 itemindex:12;
     u16 form:5;
 };
 
@@ -259,6 +259,81 @@ const struct MegaStruct sMegaTable[] =
     {
         .monindex = SPECIES_DIANCIE,
         .itemindex = ITEM_DIANCITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_RAICHU,
+        .itemindex = ITEM_RAICHUITE_X,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_VICTREEBEL,
+        .itemindex = ITEM_VICTREEBELLITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_FERALIGATR,
+        .itemindex = ITEM_FERALIGATRITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_SKARMORY,
+        .itemindex = ITEM_SKARMITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_STARAPTOR,
+        .itemindex = ITEM_STARAPTITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_SCOLIPEDE,
+        .itemindex = ITEM_SCOLIPEDITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_CHANDELURE,
+        .itemindex = ITEM_CHANDELURITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_CHESNAUGHT,
+        .itemindex = ITEM_CHESNAUGHTITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_DELPHOX,
+        .itemindex = ITEM_DELPHITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_GRENINJA,
+        .itemindex = ITEM_GRENINJITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_PYROAR,
+        .itemindex = ITEM_PYROARITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_DRAGALGE,
+        .itemindex = ITEM_DRAGALGITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_HAWLUCHA,
+        .itemindex = ITEM_HAWLUCHITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_FALINKS,
+        .itemindex = ITEM_FALINITE,
+        .form = 1,
+    },
+    {
+        .monindex = SPECIES_GLIMMORA,
+        .itemindex = ITEM_GLIMMORITE,
         .form = 1,
     },
 };

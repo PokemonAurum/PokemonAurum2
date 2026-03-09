@@ -2561,6 +2561,21 @@
 #define ITEM_SCARLET_BOOK_SVID            2555
 #define ITEM_VIOLET_BOOK_SVID             2556
 #define ITEM_BRIARS_BOOK                  2557
+#define ITEM_RAICHUITE_X                  2558
+#define ITEM_VICTREEBELLITE               2559
+#define ITEM_FERALIGATRITE                2560
+#define ITEM_SKARMITE                     2561
+#define ITEM_STARAPTITE                   2562
+#define ITEM_SCOLIPEDITE                  2563
+#define ITEM_CHANDELURITE                 2564
+#define ITEM_CHESNAUGHTITE                2565
+#define ITEM_DELPHITE                     2566
+#define ITEM_GRENINJITE                   2567
+#define ITEM_PYROARITE                    2568
+#define ITEM_DRAGALGITE                   2569
+#define ITEM_HAWLUCHITE                   2570
+#define ITEM_FALINITE                     2571
+#define ITEM_GLIMMORITE                   2572
 
 #define MAX_BASE_ITEM_NUM ITEM_BRIARS_BOOK
 
@@ -2581,7 +2596,7 @@
 
 #define IS_ITEM_MAIL(item) ((item >= ITEM_GRASS_MAIL && item <= ITEM_BRICK_MAIL))
 
-#define IS_ITEM_MEGA_STONE(item) (item >= ITEM_GENGARITE && item <= ITEM_LATIOSITE) || (item >= ITEM_SWAMPERTITE && item <= ITEM_DIANCITE) || (item >= ITEM_CAMERUPTITE && item <= ITEM_BEEDRILLITE)
+#define IS_ITEM_MEGA_STONE(item) (item >= ITEM_GENGARITE && item <= ITEM_LATIOSITE) || (item >= ITEM_SWAMPERTITE && item <= ITEM_DIANCITE) || (item >= ITEM_CAMERUPTITE && item <= ITEM_BEEDRILLITE) || (item >= ITEM_RAICHUITE_X && item <= ITEM_GLIMMORITE)
 
 #define IS_ITEM_Z_CRYSTAL(item) ((item >= ITEM_NORMALIUM_Z_HELD && item <= ITEM_PIKANIUM_Z_HELD) || (item >= ITEM_DECIDIUM_Z_HELD && item <= ITEM_MEWNIUM_Z_HELD) || (item == ITEM_PIKASHUNIUM_Z_HELD) || (item >= ITEM_MIMIKIUM_Z_ITEM && item <= ITEM_ULTRANECROZIUM_Z_ITEM))
 
