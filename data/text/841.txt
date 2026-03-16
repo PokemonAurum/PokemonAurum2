@@ -135,3 +135,18 @@ a {COLOR 255}Meteorite{COLOR 0}
 a {COLOR 255}Key Stone{COLOR 0}
 a {COLOR 255}Meteorite Shard{COLOR 0}
 an {COLOR 255}Eon Flute{COLOR 0}
+a {COLOR 255}Raichuite X{COLOR 0}
+a {COLOR 255}Victreebellite{COLOR 0}
+a {COLOR 255}Feraligatrite{COLOR 0}
+a {COLOR 255}Skarmite{COLOR 0}
+a {COLOR 255}Staraptite{COLOR 0}
+a {COLOR 255}Scolipedite{COLOR 0}
+a {COLOR 255}Chandelurite{COLOR 0}
+a {COLOR 255}Chesnaughtite{COLOR 0}
+a {COLOR 255}Delphite{COLOR 0}
+a {COLOR 255}Greninjite{COLOR 0}
+a {COLOR 255}Pyroarite{COLOR 0}
+a {COLOR 255}Dragalgite{COLOR 0}
+a {COLOR 255}Hawluchite{COLOR 0}
+a {COLOR 255}Falinite{COLOR 0}
+a {COLOR 255}Glimmorite{COLOR 0}

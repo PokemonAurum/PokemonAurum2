@@ -25606,6 +25606,141 @@ ITEMGFX_SRCS += $(ITEMGFX_DEPENDENCIES_DIR)/dummy.png
 ITEMGFX_OBJS += $(ITEMGFX_DIR)/2561-00.NCGR
 ITEMGFX_PALS += $(ITEMGFX_DIR)/2561-01.NCLR
 
+$(ITEMGFX_DIR)/5118-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5118-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_SRCS += $(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5118-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5118-01.NCLR
+
+$(ITEMGFX_DIR)/5120-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5120-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5120-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5120-01.NCLR
+
+$(ITEMGFX_DIR)/5122-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5122-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5122-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5122-01.NCLR
+
+$(ITEMGFX_DIR)/5124-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5124-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5124-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5124-01.NCLR
+
+$(ITEMGFX_DIR)/5126-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5126-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5126-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5126-01.NCLR
+
+$(ITEMGFX_DIR)/5128-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5128-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5128-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5128-01.NCLR
+
+$(ITEMGFX_DIR)/5130-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5130-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5130-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5130-01.NCLR
+
+$(ITEMGFX_DIR)/5132-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5132-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5132-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5132-01.NCLR
+
+$(ITEMGFX_DIR)/5134-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5134-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5134-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5134-01.NCLR
+
+$(ITEMGFX_DIR)/5136-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5136-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5136-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5136-01.NCLR
+
+$(ITEMGFX_DIR)/5138-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+	
+$(ITEMGFX_DIR)/5138-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5138-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5138-01.NCLR
+
+$(ITEMGFX_DIR)/5140-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5140-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5140-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5140-01.NCLR
+
+$(ITEMGFX_DIR)/5142-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5142-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5142-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5142-01.NCLR
+
+$(ITEMGFX_DIR)/5144-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5144-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5144-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5144-01.NCLR
+
+$(ITEMGFX_DIR)/5146-00.NCGR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -clobbersize -version101 -bitdepth 4
+
+$(ITEMGFX_DIR)/5146-01.NCLR:$(ITEMGFX_DEPENDENCIES_DIR)/lucarionite.png
+	$(GFX) $< $@ -ir -bitdepth 4
+
+ITEMGFX_OBJS += $(ITEMGFX_DIR)/5146-00.NCGR
+ITEMGFX_PALS += $(ITEMGFX_DIR)/5146-01.NCLR
 
 
 $(ITEMGFX_NARC): $(ITEMGFX_SRCS) $(ITEMGFX_OBJS) $(ITEMGFX_PALS)
