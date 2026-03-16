@@ -331,3 +331,4 @@ Contact may freeze\nthe attacking Pokémon.
 Critical hit chance\nincreases with speed.
 Boosts Sp. Atk when\nbelow 75% HP.
 Boosts Atk and Speed\nbased on number of dog pokemon.
+May inflict frostbite\non contact.

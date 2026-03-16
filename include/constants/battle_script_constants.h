@@ -491,8 +491,9 @@
 #define SUB_SEQ_LASER_FOCUS                           (481)
 #define SUB_SEQ_MOVE_FAIL_THROAT_CHOP                 (482)
 #define SUB_SEQ_USER_DEF_DOWN_1_SPEED_UP_1            (483)
-
-#define MAX_BASE_SUBSCRIPT_NUM 483
+#define SUB_SEQ_APPLY_FROSTBITE                       (484)
+#define SUB_SEQ_FROSTBITE_DAMAGE                      (485)
+#define MAX_BASE_SUBSCRIPT_NUM 485
 
 // define your custom subscripts below like this
 // #define MOVE_SUBSCRIPT_CUSTOM_1 (MAX_BASE_SUBSCRIPT_NUM + 1)
@@ -717,8 +718,9 @@
 #define ADD_STATUS_EFF_STUFF_CHEEKS                    (214)
 #define ADD_STATUS_EFF_POWDER                          (215)
 #define ADD_STATUS_EFF_LASER_FOCUS                     (216)
+#define ADD_STATUS_EFF_APPLY_FROSTBITE                 (217)
+#define MAX_BASE_SUBSCRIPT_PTR_NUM (217)
 
-#define MAX_BASE_SUBSCRIPT_PTR_NUM (216)
 
 // define your custom subscripts below like this
 // #define MOVE_SUBSCRIPT_PTR_CUSTOM_1 (MAX_BASE_SUBSCRIPT_PTR_NUM + 1)

@@ -154,6 +154,18 @@ BOOL MoveHitDefenderAbilityCheckInternal(void *bw, struct BattleStruct *sp, int 
             seq_no[0] = SUB_SEQ_APPLY_ATTRACT;
             ret = TRUE;
         }
+    } else if (MoldBreakerAbilityCheck(sp, sp->attack_client, sp->defence_client, ABILITY_SHIVERBURN)) {
+        if ((sp->battlemon[sp->attack_client].hp)
+            && (sp->battlemon[sp->attack_client].condition == 0)
+            && ((sp->oneSelfFlag[sp->defence_client].physical_damage) || (sp->oneSelfFlag[sp->defence_client].special_damage))
+            && (IsContactBeingMade(GetBattlerAbility(sp, sp->attack_client), HeldItemHoldEffectGet(sp, sp->attack_client), HeldItemHoldEffectGet(sp, sp->defence_client), sp->current_move_index, sp->moveTbl[sp->current_move_index].flag))
+            && (BattleRand(bw) % 10 < 1)) {
+            sp->addeffect_type = ADD_STATUS_ABILITY;
+            sp->state_client = sp->attack_client;
+            sp->battlerIdTemp = sp->defence_client;
+            seq_no[0] = SUB_SEQ_APPLY_FROSTBITE;
+            ret = TRUE;
+        }
     } else if (MoldBreakerAbilityCheck(sp, sp->attack_client, sp->defence_client, ABILITY_AFTERMATH)) {
         if ((sp->defence_client == sp->fainting_client)
             && (GetBattlerAbility(sp, sp->attack_client) != ABILITY_MAGIC_GUARD)
