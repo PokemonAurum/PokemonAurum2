@@ -36,8 +36,7 @@ _checkIfShouldDoSpikes:
     // Skip spikes damage if HDB, but still check TSpikes for grounded Poison types to clear it.
     CheckItemHoldEffect CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, HOLD_EFFECT_IGNORE_ENTRY_HAZARDS, _landingPad
     CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, ABILITY_MAGIC_GUARD, _landingPad
-    GotoIfGrounded BATTLER_CATEGORY_SWITCHED_MON, _checkSpikes
-    GoTo _landingPad
+    CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, ABILITY_WONDER_GUARD, _landingPad
 
 _checkSpikes:
     CheckSpikes BATTLER_CATEGORY_SWITCHED_MON, _landingPad
@@ -70,6 +69,7 @@ _checkToxicSpikes:
 _regularPoison:
     // a mon with comatose can not be poisoned by toxic spikes
     CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, ABILITY_COMATOSE, _landingPad
+    CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, ABILITY_WONDER_GUARD, _landingPad
     CheckItemHoldEffect CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, HOLD_EFFECT_IGNORE_ENTRY_HAZARDS, _end
     Call BATTLE_SUBSCRIPT_POISON
     GoTo _landingPad
@@ -77,6 +77,7 @@ _regularPoison:
 _badlyPoison:
     // a mon with comatose can not be poisoned by toxic spikes
     CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, ABILITY_COMATOSE, _landingPad
+    CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, ABILITY_WONDER_GUARD, _landingPad
     CheckItemHoldEffect CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, HOLD_EFFECT_IGNORE_ENTRY_HAZARDS, _end
     Call BATTLE_SUBSCRIPT_BADLY_POISON
     GoTo _landingPad
@@ -111,6 +112,7 @@ _checkIfShouldDoStealthRock:
     // Heavy-Duty Boots to ignore Stealth Rock when airborne
     CheckItemHoldEffect CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, HOLD_EFFECT_IGNORE_ENTRY_HAZARDS, _landingPad
     CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, ABILITY_MAGIC_GUARD, _landingPad
+    CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_SWITCHED_MON, ABILITY_WONDER_GUARD, _landingPad
 
 _checkStealthRock:
     CheckStealthRock BATTLER_CATEGORY_SWITCHED_MON, _landingPad

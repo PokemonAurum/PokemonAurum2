@@ -3484,6 +3484,7 @@ BOOL BtlCmd_EndOfTurnWeatherEffect(struct BattleSystem *bsys, struct BattleStruc
                 ability != ABILITY_OVERCOAT &&
                 ability != ABILITY_SAND_RUSH &&
                 ability != ABILITY_SAND_FORCE &&
+                ability != ABILITY_WONDER_GUARD &&
                 hold_effect != HOLD_EFFECT_SPORE_POWDER_IMMUNITY &&
                 !(ctx->battlemon[battlerId].effect_of_moves & 0x40080)) {
                     ctx->waza_work = MOVE_SANDSTORM;
@@ -3510,6 +3511,7 @@ BOOL BtlCmd_EndOfTurnWeatherEffect(struct BattleSystem *bsys, struct BattleStruc
                            ability != ABILITY_SNOW_CLOAK &&
                            ability != ABILITY_MAGIC_GUARD &&
                            ability != ABILITY_OVERCOAT &&
+                           ability != ABILITY_WONDER_GUARD &&
                            hold_effect != HOLD_EFFECT_SPORE_POWDER_IMMUNITY) {
                     ctx->waza_work = MOVE_HAIL;
                     ctx->hp_calc_work = BattleDamageDivide(ctx->battlemon[battlerId].maxhp * -1, 16);
