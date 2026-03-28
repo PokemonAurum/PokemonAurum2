@@ -82,6 +82,7 @@ void BattleController_CheckTaunt(struct BattleSystem *bsys, struct BattleStruct 
 void BattleController_CheckImprison(struct BattleSystem *bsys, struct BattleStruct *ctx);
 void BattleController_CheckConfusion(struct BattleSystem *bsys, struct BattleStruct *ctx);
 void BattleController_CheckParalysis(struct BattleSystem *bsys, struct BattleStruct *ctx);
+void BattleController_CheckWinded(struct BattleSystem *bsys, struct BattleStruct *ctx);
 void BattleController_CheckInfatuation(struct BattleSystem *bsys, struct BattleStruct *ctx);
 void BattleController_CheckStanceChange(struct BattleSystem *bsys, struct BattleStruct *ctx);
 BOOL BattlerController_RedirectTarget(struct BattleSystem *bsys, struct BattleStruct *ctx);
@@ -432,6 +433,16 @@ void __attribute__((section (".init"))) BattleController_BeforeMove(struct Battl
 
             if ((ctx->waza_out_check_on_off & SYSCTL_SKIP_STATUS_CHECK) == FALSE) {
                 BattleController_CheckInfatuation(bsys, ctx);
+            }
+            ctx->wb_seq_no++;
+            return;
+        }
+        case BEFORE_MOVE_STATE_WINDED: {
+#ifdef DEBUG_BEFORE_MOVE_LOGIC
+            debug_printf("In BEFORE_MOVE_STATE_WINDED\n");
+#endif
+            if ((ctx->waza_out_check_on_off & SYSCTL_SKIP_STATUS_CHECK) == FALSE) {
+                BattleController_CheckWinded(bsys, ctx);
             }
             ctx->wb_seq_no++;
             return;
@@ -1444,6 +1455,21 @@ void BattleController_CheckParalysis(struct BattleSystem *bsys, struct BattleStr
         if (BattleRand(bsys) % 4 == 0) {
             ctx->moveOutCheck[ctx->attack_client].stoppedFromParalysis = TRUE;
             LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_FULLY_PARALYZED);
+            ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
+            ctx->next_server_seq_no = CONTROLLER_COMMAND_39;
+            ctx->wb_seq_no = BEFORE_MOVE_START;
+            CopyBattleMonToPartyMon(bsys, ctx, ctx->attack_client);
+            ctx->server_status_flag |= BATTLE_STATUS_CHECK_LOOP_ONLY_ONCE;
+            ctx->waza_status_flag |= MOVE_STATUS_NO_MORE_WORK;
+        }
+    }
+}
+
+void BattleController_CheckWinded(struct BattleSystem *bsys, struct BattleStruct *ctx) {
+    if (ctx->battlemon[ctx->attack_client].winded_turns > 0) {
+        if (BattleRand(bsys) % 2 == 0) {
+            ctx->moveOutCheck[ctx->attack_client].stoppedFromParalysis = TRUE;
+            LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_WINDED_CANT_MOVE);
             ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
             ctx->next_server_seq_no = CONTROLLER_COMMAND_39;
             ctx->wb_seq_no = BEFORE_MOVE_START;

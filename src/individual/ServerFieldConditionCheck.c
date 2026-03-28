@@ -58,6 +58,7 @@ enum EndTurnResolutionOrder {
     ENDTURN_FORM_CHANGE,
     ENDTURN_FOURTH_EVENT_BLOCK,
     ENDTURN_ION_DELUGE_FADING,
+    ENDTURN_WINDED,
     ENDTURN_END,
 };
 
@@ -1974,6 +1975,28 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
                 sp->field_condition &= ~FIELD_STATUS_ION_DELUGE;
 
                 sp->fcc_seq_no++;
+                break;
+            }
+            case ENDTURN_WINDED: {
+                while (sp->scc_work < client_set_max) {
+                    battlerId = sp->turnOrder[sp->scc_work];
+                    if (sp->battlemon[battlerId].winded_turns > 0) {
+                        sp->battlemon[battlerId].winded_turns--;
+                        if (sp->battlemon[battlerId].winded_turns == 0) {
+                            sp->battlerIdTemp = battlerId;
+                            LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_WINDED_END);
+                            sp->next_server_seq_no = sp->server_seq_no;
+                            sp->server_seq_no = 22;
+                            ret = 1;
+                        }
+                    }
+                    sp->scc_work++;
+                    break;
+                }
+                if (sp->scc_work >= client_set_max) {
+                    sp->scc_work = 0;
+                    sp->fcc_seq_no++;
+                }
                 break;
             }
             case ENDTURN_END: {

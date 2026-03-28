@@ -494,7 +494,9 @@
 #define SUB_SEQ_APPLY_FROSTBITE                       (484)
 #define SUB_SEQ_FROSTBITE_DAMAGE                      (485)
 #define SUB_SEQ_ITEM_RECOVER_FROSTBITE                (486)
-#define MAX_BASE_SUBSCRIPT_NUM 486
+#define SUB_SEQ_WINDED_CANT_MOVE                      (487)  // "{mon} is buffeted by wind and can't move!"
+#define SUB_SEQ_WINDED_END                            (488)  // "{mon} is no longer winded!"
+#define MAX_BASE_SUBSCRIPT_NUM 488
 
 // define your custom subscripts below like this
 // #define MOVE_SUBSCRIPT_CUSTOM_1 (MAX_BASE_SUBSCRIPT_NUM + 1)

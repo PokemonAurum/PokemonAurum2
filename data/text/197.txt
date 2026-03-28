@@ -1632,3 +1632,9 @@ The opposing {STRVAR_1 1, 0, 0} is hurt\nby its frostbite!
 {STRVAR_1 1, 0, 0}’s {STRVAR_1 8, 1, 0}\nhealed its frostbite!
 The wild {STRVAR_1 1, 0, 0}’s\n{STRVAR_1 8, 1, 0} healed its frostbite!
 The opposing {STRVAR_1 1, 0, 0}’s\n{STRVAR_1 8, 1, 0} healed its frostbite!
+{STRVAR_1 1, 0, 0} is winded\nand cannot move!
+The wild {STRVAR_1 1, 0, 0} is winded\nand cannot move!
+The opposing {STRVAR_1 1, 0, 0} is winded\nand cannot move!
+{STRVAR_1 1, 0, 0} shook off\nthe wind!
+The wild {STRVAR_1 1, 0, 0} shook off\nthe wind!
+The opposing {STRVAR_1 1, 0, 0} shook off\nthe wind!
