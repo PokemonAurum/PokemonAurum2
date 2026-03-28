@@ -1044,6 +1044,10 @@ void LONG_CALL ClearBattleMonFlags(struct BattleStruct *sp, int client)
     // code from aero's pr
     sp->battlemon[client].slow_start_flag = 0;
     sp->battlemon[client].slow_start_end_flag = 0;
+    sp->battlemon[client].condition3 = 0;
+    sp->battlemon[client].winded_turns = 0;
+    sp->battlemon[client].awestruck_turns = 0;
+    sp->battlemon[client].condition3_migraine = 0;
 
     sp->battlemon[client].sheer_force_flag = 0;
     sp->battlemon[client].imposter_flag = 0;

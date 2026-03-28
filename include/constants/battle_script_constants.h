@@ -742,6 +742,15 @@
 #define BATTLE_ANIMATION_BURNED             3
 #define BATTLE_ANIMATION_FROZEN             4
 #define BATTLE_ANIMATION_PARALYZED          5
+
+// Custom status condition animation aliases — reuse base ROM animation values
+#define BATTLE_ANIMATION_FROSTBITE   BATTLE_ANIMATION_FROZEN     // Ice blue bar
+#define BATTLE_ANIMATION_DRENCHED    BATTLE_ANIMATION_POISONED   // Water — temp remap
+#define BATTLE_ANIMATION_FATIGUE     BATTLE_ANIMATION_BURNED     // Fighting — temp remap
+#define BATTLE_ANIMATION_WINDED      BATTLE_ANIMATION_PARALYZED  // Flying — temp remap
+#define BATTLE_ANIMATION_PESTER      BATTLE_ANIMATION_POISONED   // Bug — temp remap
+#define BATTLE_ANIMATION_SCARED      BATTLE_ANIMATION_PARALYZED  // Ghost — temp remap
+#define BATTLE_ANIMATION_IDOLIZE     BATTLE_ANIMATION_INFATUATED // Fairy - temp remap
 #define BATTLE_ANIMATION_CONFUSED           6
 #define BATTLE_ANIMATION_INFATUATED         7
 #define BATTLE_ANIMATION_LEVEL_UP           8
@@ -759,6 +768,9 @@
 #define BATTLE_ANIMATION_WEATHER_HAIL       20
 #define BATTLE_ANIMATION_WEATHER_SAND       21
 #define BATTLE_ANIMATION_WEATHER_SUN        22
+
+// Custom status aliases — reuse base ROM animation values
+#define BATTLE_ANIMATION_FROSTBITE  BATTLE_ANIMATION_FROZEN  // reuses freeze visual; no base ROM hook implemented yet
 
 #define MOVE_SIDE_EFFECT_BREAK_SCREENS 0x800000
 #define MOVE_SIDE_EFFECT_CHECK_SUBSTITUTE 0x1000000
