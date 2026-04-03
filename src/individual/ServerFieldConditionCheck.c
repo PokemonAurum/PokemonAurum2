@@ -2010,7 +2010,9 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
             case ENDTURN_DRENCHED: {
                 while (sp->scc_work < client_set_max) {
                     battlerId = sp->turnOrder[sp->scc_work];
-                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_DRENCHED) && sp->battlemon[battlerId].hp != 0) {
+                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_DRENCHED)
+                        && sp->battlemon[battlerId].hp != 0
+                        && GetBattlerAbility(sp, battlerId) != ABILITY_WONDER_GUARD) {
                         sp->battlerIdTemp = battlerId;
                         sp->hp_calc_work = BattleDamageDivide(sp->battlemon[battlerId].maxhp * -1, 16);
                         LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_DRENCHED_DAMAGE);
@@ -2030,7 +2032,9 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
             case ENDTURN_FATIGUE: {
                 while (sp->scc_work < client_set_max) {
                     battlerId = sp->turnOrder[sp->scc_work];
-                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_FATIGUE) && sp->battlemon[battlerId].hp != 0) {
+                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_FATIGUE)
+                        && sp->battlemon[battlerId].hp != 0
+                        && GetBattlerAbility(sp, battlerId) != ABILITY_WONDER_GUARD) {
                         sp->battlerIdTemp = battlerId;
                         sp->state_client = battlerId;
                         LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_FATIGUE_ATK_DROP);
@@ -2050,7 +2054,9 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
             case ENDTURN_PESTER: {
                 while (sp->scc_work < client_set_max) {
                     battlerId = sp->turnOrder[sp->scc_work];
-                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_PESTER) && sp->battlemon[battlerId].hp != 0) {
+                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_PESTER)
+                        && sp->battlemon[battlerId].hp != 0
+                        && GetBattlerAbility(sp, battlerId) != ABILITY_WONDER_GUARD) {
                         sp->battlerIdTemp = battlerId;
                         sp->hp_calc_work = BattleDamageDivide(sp->battlemon[battlerId].maxhp * -1, 8);
                         LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_PESTER_DAMAGE);
@@ -2114,7 +2120,9 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
             case ENDTURN_ALLERGIES: {
                 while (sp->scc_work < client_set_max) {
                     battlerId = sp->turnOrder[sp->scc_work];
-                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_ALLERGIES) && sp->battlemon[battlerId].hp != 0) {
+                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_ALLERGIES)
+                      && sp->battlemon[battlerId].hp != 0
+                      && GetBattlerAbility(sp, battlerId) != ABILITY_WONDER_GUARD) {
                         u8 stat_choice = BattleRand(bw) % 4;
                         u8 stat_ptr = (stat_choice == 0) ? 0x16 :  // MOVE_SUBSCRIPT_PTR_ATTACK_DOWN_1_STAGE
                                       (stat_choice == 1) ? 0x17 :  // MOVE_SUBSCRIPT_PTR_DEFENSE_DOWN_1_STAGE
@@ -2162,7 +2170,9 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
             case ENDTURN_MIGRAINE: {
                 while (sp->scc_work < client_set_max) {
                     battlerId = sp->turnOrder[sp->scc_work];
-                    if (sp->battlemon[battlerId].migraine_turns > 0 && sp->battlemon[battlerId].hp != 0) {
+                    if ((sp->battlemon[battlerId].condition3 & CONDITION3_MIGRAINE)
+                      && sp->battlemon[battlerId].hp != 0
+                      && GetBattlerAbility(sp, battlerId) != ABILITY_WONDER_GUARD) {
                         sp->battlemon[battlerId].migraine_turns--;
                         if (sp->battlemon[battlerId].migraine_turns == 0) {
                             sp->battlemon[battlerId].condition3 &= ~CONDITION3_MIGRAINE;

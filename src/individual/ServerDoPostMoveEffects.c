@@ -72,6 +72,20 @@ void ServerDoPostMoveEffectsInternal(void *bsys, struct BattleStruct *ctx)
         if (SynchroniseAbilityCheck(bsys, ctx, ctx->server_seq_no) == TRUE)
             return;
         FALLTHROUGH;
+        case SWOAK_SEQ_MIGRAINE_CHECK:
+        ctx->swoak_seq_no++;
+        if (GetMoveSplit(ctx, ctx->current_move_index) == SPLIT_STATUS
+            && (ctx->battlemon[ctx->attack_client].condition3 & CONDITION3_MIGRAINE)
+            && ctx->battlemon[ctx->attack_client].hp != 0)
+        {
+            ctx->battlerIdTemp = ctx->attack_client;
+            ctx->hp_calc_work = BattleDamageDivide(ctx->battlemon[ctx->attack_client].maxhp * -1, 10);
+            LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_MIGRAINE_DAMAGE);
+            ctx->next_server_seq_no = ctx->server_seq_no;
+            ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
+            return;
+        }
+        FALLTHROUGH;
     case SWOAK_SEQ_POKE_APPEAR_CHECK:
         {
             int seq_no;

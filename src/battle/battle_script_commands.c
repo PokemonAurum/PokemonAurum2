@@ -765,7 +765,46 @@ BOOL BattleScriptCommandHandler(void *bw, struct BattleStruct *sp)
                     sp->SkillSeqWork[sp->skill_seq_no + 2] = BATTLE_ANIMATION_IDOLIZE;
             }
         }
+       // Opcode 0x34 intercept: Fatigue blocks/reduces Attack raises, Awestruck blocks all stat raises
+        if (command == 0x34)
+        {
+            // waza_work values 0x10-0x15 are stat raises
+            if (sp->waza_work < 0x16 && sp->waza_work >= 0x10)
+            {
+                int battler = sp->state_client;
+                if (battler >= 0 && battler < BATTLER_MAX)
+                {
+                    BOOL block = FALSE;
 
+                    // Awestruck blocks all stat raises
+                    if (sp->battlemon[battler].awestruck_turns > 0)
+                        block = TRUE;
+
+                    // Fatigue blocks/reduces Attack raises only
+                    // waza_work 0x10 = +1 Attack, 0x29 = +2 Attack, 0x9C = +3 Attack
+                    if (!block && (sp->battlemon[battler].condition3 & CONDITION3_FATIGUE))
+                    {
+                        if (sp->waza_work == 0x10)       // +1 Attack — block entirely
+                            block = TRUE;
+                        else if (sp->waza_work == 0x29)  // +2 Attack — reduce to +1
+                            sp->waza_work = 0x10;
+                        else if (sp->waza_work == 0x9C)  // +3 Attack — reduce to +2
+                            sp->waza_work = 0x29;
+                    }
+
+                    if (block)
+                    {
+                        IncrementBattleScriptPtr(sp, 1);
+                        int jumpNoChange = read_battle_script_param(sp);
+                        int jumpBlocked = read_battle_script_param(sp);
+                        (void)jumpNoChange;
+                        IncrementBattleScriptPtr(sp, jumpBlocked);
+                        sp->battle_progress_flag = 1;
+                        continue;
+                    }
+                }
+            }
+        }
         if (command < START_OF_NEW_BTL_SCR_CMDS)
         {
             ret = BattleScriptCmdTable[command](bw, sp);

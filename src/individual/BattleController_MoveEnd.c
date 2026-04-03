@@ -195,7 +195,23 @@ void LONG_CALL BattleController_MoveEndInternal(struct BattleSystem *bsys, struc
                 }
                 ctx->oneTurnFlag[ctx->attack_client].chargeProcessedFlag = 1;
         }
-
+        // Allergies reverse Beast Boost: on KO, drop the attacker's highest stat by 1
+        if ((ctx->battlemon[ctx->attack_client].condition3 & CONDITION3_ALLERGIES)
+            && ctx->oneTurnFlag[ctx->attack_client].numberOfKOs
+            && ctx->battlemon[ctx->attack_client].hp) {
+            u8 stat = BeastBoostGreatestStatHelper(ctx, ctx->attack_client);
+            if (ctx->battlemon[ctx->attack_client].states[STAT_ATTACK + stat] > -6) {
+                ctx->addeffect_param = ADD_STATUS_EFF_BOOST_STATS_ATTACK_DOWN + stat;
+                ctx->addeffect_type = ADD_EFFECT_ABILITY;
+                ctx->state_client = ctx->attack_client;
+                LoadBattleSubSeqScript(ctx, 1, SUB_SEQ_BOOST_STATS);
+                ctx->next_server_seq_no = ctx->server_seq_no;
+                ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
+                ctx->oneTurnFlag[ctx->attack_client].numberOfKOs = 0;
+                return;
+            }
+            ctx->oneTurnFlag[ctx->attack_client].numberOfKOs = 0;
+        }
         switch (GetBattlerAbility(ctx, ctx->attack_client)) {
             case ABILITY_BEAST_BOOST:
                 if (ctx->oneTurnFlag[ctx->attack_client].numberOfKOs) {

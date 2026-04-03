@@ -516,7 +516,10 @@
 #define SUB_SEQ_MIGRAINE_DAMAGE                       (506)
 #define SUB_SEQ_PESTER_CANT_MOVE                      (507)
 #define SUB_SEQ_AWESTRUCK_CANT_MOVE                   (508)
-#define MAX_BASE_SUBSCRIPT_NUM 508
+#define SUB_SEQ_BLINDED_MISS                          (509)  // "{mon} could not see its target!"
+#define SUB_SEQ_PESTER_MISS                           (510)  // "{mon} was too distracted to aim!"
+#define SUB_SEQ_WINDED_MISS                           (511)  // "{mon} was too winded to follow through!"
+#define MAX_BASE_SUBSCRIPT_NUM 511
 
 // define your custom subscripts below like this
 // #define MOVE_SUBSCRIPT_CUSTOM_1 (MAX_BASE_SUBSCRIPT_NUM + 1)

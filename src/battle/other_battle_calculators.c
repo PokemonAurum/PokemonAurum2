@@ -1136,21 +1136,38 @@ u8 LONG_CALL CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int clien
     debug_printf("[CalcSpeed] %s's speed2: %d\n", client2Nickname, speed2);
 #endif
 
-    // Step 11: Paralysis
+  // Step 11: Paralysis
 
     if ((ability1 != ABILITY_QUICK_FEET)
     && sp->battlemon[client1].condition & STATUS_PARALYSIS) {
-        speed1 = QMul_RoundUp(speed1, UQ412__0_5);  // gen 7 on only halves speed for paralysis
+        speed1 = QMul_RoundUp(speed1, UQ412__0_5);
     }
 
     if ((ability2 != ABILITY_QUICK_FEET)
     && sp->battlemon[client2].condition & STATUS_PARALYSIS) {
-        speed2 = QMul_RoundUp(speed2, UQ412__0_5);  // gen 7 on only halves speed for paralysis
+        speed2 = QMul_RoundUp(speed2, UQ412__0_5);
     }
 
 #ifdef DEBUG_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 11: Paralysis\n");
+    debug_printf("[CalcSpeed] %s's speed1: %d\n", client1Nickname, speed1);
+    debug_printf("[CalcSpeed] %s's speed2: %d\n", client2Nickname, speed2);
+#endif
+
+    // Step 11b: Drenched — 20% flat Speed penalty
+
+    if (sp->battlemon[client1].condition3 & CONDITION3_DRENCHED) {
+        speed1 = QMul_RoundUp(speed1, UQ412__0_8);
+    }
+
+    if (sp->battlemon[client2].condition3 & CONDITION3_DRENCHED) {
+        speed2 = QMul_RoundUp(speed2, UQ412__0_8);
+    }
+
+#ifdef DEBUG_SPEED_CALC
+    debug_printf("\n=================\n");
+    debug_printf("[CalcSpeed] Step 11b: Drenched\n");
     debug_printf("[CalcSpeed] %s's speed1: %d\n", client1Nickname, speed1);
     debug_printf("[CalcSpeed] %s's speed2: %d\n", client2Nickname, speed2);
 #endif

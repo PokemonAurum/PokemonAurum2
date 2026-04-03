@@ -1692,3 +1692,6 @@ The opposing {STRVAR_1 1, 0, 0}\nhas a migraine!
 {STRVAR_1 1, 0, 0} is hurt by\nits migraine!
 The wild {STRVAR_1 1, 0, 0} is hurt\nby its migraine!
 The opposing {STRVAR_1 1, 0, 0} is hurt\nby its migraine!
+{STRVAR_1 0, 0, 0} could not see its target!
+{STRVAR_1 0, 0, 0} was too distracted to aim!
+{STRVAR_1 0, 0, 0} was too winded to follow through!
