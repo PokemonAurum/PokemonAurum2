@@ -31,6 +31,11 @@ struct PACKED TestBattlePokemon {
     u16 hp;              // 0 = full HP
     u32 status;          // STATUS_BURN, STATUS_POISON, STATUS_SLEEP, etc.
     u32 condition2;      // STATUS2_RECHARGE, STATUS2_CONFUSION, etc. (can be OR'd)
+    u32 condition3;      // CONDITION3_WINDED, CONDITION3_DRENCHED, etc. (can be OR'd)
+    u8  winded_turns;
+    u8  awestruck_turns;
+    u8  migraine_turns;
+    u8  idolize_turns;
     u32 moveEffectFlags; // MOVE_EFFECT_FLAG_LEECH_SEED_ACTIVE, etc. (can be OR'd)
 };
 

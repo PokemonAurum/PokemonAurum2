@@ -341,6 +341,22 @@ void LONG_CALL TestBattle_ApplyBattleState(struct BattleStruct *sp)
             }
         }
 
+        if (mon->condition3) {
+            sp->battlemon[battlerId].condition3 |= mon->condition3;
+        }
+        if (mon->winded_turns) {
+            sp->battlemon[battlerId].winded_turns = mon->winded_turns;
+        }
+        if (mon->awestruck_turns) {
+            sp->battlemon[battlerId].awestruck_turns = mon->awestruck_turns;
+        }
+        if (mon->migraine_turns) {
+            sp->battlemon[battlerId].migraine_turns = mon->migraine_turns;
+        }
+        if (mon->idolize_turns) {
+            sp->battlemon[battlerId].idolize_turns = mon->idolize_turns;
+        }
+
         if (mon->moveEffectFlags) {
             sp->battlemon[battlerId].effect_of_moves |= mon->moveEffectFlags;
         }
@@ -371,6 +387,22 @@ void LONG_CALL TestBattle_ApplyBattleState(struct BattleStruct *sp)
                     sp->battlemon[battlerId].moveeffect.moveNoChoice = mon->moves[0];
                 }
             }
+        }
+
+        if (mon->condition3) {
+            sp->battlemon[battlerId].condition3 |= mon->condition3;
+        }
+        if (mon->winded_turns) {
+            sp->battlemon[battlerId].winded_turns = mon->winded_turns;
+        }
+        if (mon->awestruck_turns) {
+            sp->battlemon[battlerId].awestruck_turns = mon->awestruck_turns;
+        }
+        if (mon->migraine_turns) {
+            sp->battlemon[battlerId].migraine_turns = mon->migraine_turns;
+        }
+        if (mon->idolize_turns) {
+            sp->battlemon[battlerId].idolize_turns = mon->idolize_turns;
         }
 
         if (mon->moveEffectFlags) {

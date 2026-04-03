@@ -2176,6 +2176,11 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
                         sp->battlemon[battlerId].migraine_turns--;
                         if (sp->battlemon[battlerId].migraine_turns == 0) {
                             sp->battlemon[battlerId].condition3 &= ~CONDITION3_MIGRAINE;
+                            sp->battlerIdTemp = battlerId;
+                            LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_MIGRAINE_END);
+                            sp->next_server_seq_no = sp->server_seq_no;
+                            sp->server_seq_no = 22;
+                            ret = 1;
                         }
                     }
                     sp->scc_work++;
