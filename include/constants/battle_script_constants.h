@@ -520,7 +520,9 @@
 #define SUB_SEQ_PESTER_MISS                           (510)  // "{mon} was too distracted to aim!"
 #define SUB_SEQ_WINDED_MISS                           (511)  // "{mon} was too winded to follow through!"
 #define SUB_SEQ_MIGRAINE_END                          (512)  // "{mon}'s migraine faded!"
-#define MAX_BASE_SUBSCRIPT_NUM 512
+#define SUB_SEQ_SCARED_CANT_MOVE                      (513)  // "{mon} was too scared to move!"
+#define SUB_SEQ_FATIGUE_END                           (514)  // "{mon}'s fatigue lifted!"
+#define MAX_BASE_SUBSCRIPT_NUM 514
 
 // define your custom subscripts below like this
 // #define MOVE_SUBSCRIPT_CUSTOM_1 (MAX_BASE_SUBSCRIPT_NUM + 1)

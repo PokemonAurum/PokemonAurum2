@@ -883,6 +883,7 @@ struct BattlePokemon
     /* 0x25 */ u8 type2;                     /**< second type */
     /* 0x26 */ u8 form_no : 5;               /**< form id */
                u8 rare : 1;                  /**< shininess */
+               u8 fatigue_turns : 2;         /**< turns remaining for Fatigue (0=inactive, 1-3) */
                u8 condition3;                /**< custom volatile status conditions (CONDITION3_* constants) */
 
                /** switch in flags to mark it as having been done */

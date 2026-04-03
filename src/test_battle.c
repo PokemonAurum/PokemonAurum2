@@ -356,6 +356,9 @@ void LONG_CALL TestBattle_ApplyBattleState(struct BattleStruct *sp)
         if (mon->idolize_turns) {
             sp->battlemon[battlerId].idolize_turns = mon->idolize_turns;
         }
+        if (mon->fatigue_turns) {
+            sp->battlemon[battlerId].fatigue_turns = mon->fatigue_turns;
+        }
 
         if (mon->moveEffectFlags) {
             sp->battlemon[battlerId].effect_of_moves |= mon->moveEffectFlags;
@@ -403,6 +406,9 @@ void LONG_CALL TestBattle_ApplyBattleState(struct BattleStruct *sp)
         }
         if (mon->idolize_turns) {
             sp->battlemon[battlerId].idolize_turns = mon->idolize_turns;
+        }
+        if (mon->fatigue_turns) {
+            sp->battlemon[battlerId].fatigue_turns = mon->fatigue_turns;
         }
 
         if (mon->moveEffectFlags) {

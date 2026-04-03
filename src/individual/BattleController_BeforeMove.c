@@ -1558,7 +1558,7 @@ void BattleController_CheckAwestruck(struct BattleSystem *bsys, struct BattleStr
     if (ctx->battlemon[ctx->attack_client].awestruck_turns > 0) {
         if (BattleRand(bsys) % 100 < 15) {
             ctx->moveOutCheck[ctx->attack_client].stoppedFromParalysis = TRUE;
-            LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_WINDED_CANT_MOVE);
+            LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_AWESTRUCK_CANT_MOVE);
             ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
             ctx->next_server_seq_no = CONTROLLER_COMMAND_39;
             ctx->wb_seq_no = BEFORE_MOVE_START;
@@ -1577,7 +1577,7 @@ void BattleController_CheckScared(struct BattleSystem *bsys, struct BattleStruct
         }
         if (BattleRand(bsys) % 2 == 0) {
             ctx->moveOutCheck[ctx->attack_client].stoppedFromParalysis = TRUE;
-            LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_PESTER_CANT_MOVE);
+            LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, SUB_SEQ_SCARED_CANT_MOVE);
             ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
             ctx->next_server_seq_no = CONTROLLER_COMMAND_39;
             ctx->wb_seq_no = BEFORE_MOVE_START;

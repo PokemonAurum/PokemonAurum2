@@ -36,6 +36,7 @@ struct PACKED TestBattlePokemon {
     u8  awestruck_turns;
     u8  migraine_turns;
     u8  idolize_turns;
+    u8  fatigue_turns;
     u32 moveEffectFlags; // MOVE_EFFECT_FLAG_LEECH_SEED_ACTIVE, etc. (can be OR'd)
 };
 

@@ -2035,9 +2035,16 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
                     if ((sp->battlemon[battlerId].condition3 & CONDITION3_FATIGUE)
                         && sp->battlemon[battlerId].hp != 0
                         && GetBattlerAbility(sp, battlerId) != ABILITY_WONDER_GUARD) {
-                        sp->battlerIdTemp = battlerId;
-                        sp->state_client = battlerId;
-                        LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_FATIGUE_ATK_DROP);
+                        sp->battlemon[battlerId].fatigue_turns--;
+                        if (sp->battlemon[battlerId].fatigue_turns == 0) {
+                            sp->battlemon[battlerId].condition3 &= ~CONDITION3_FATIGUE;
+                            sp->battlerIdTemp = battlerId;
+                            LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_FATIGUE_END);
+                        } else {
+                            sp->battlerIdTemp = battlerId;
+                            sp->state_client = battlerId;
+                            LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_FATIGUE_ATK_DROP);
+                        }
                         sp->next_server_seq_no = sp->server_seq_no;
                         sp->server_seq_no = 22;
                         ret = 1;

@@ -1651,11 +1651,11 @@ The opposing {STRVAR_1 1, 0, 0}\nbecame fatigued!
 The wild {STRVAR_1 1, 0, 0}’s fatigue\nis weighing it down!
 The opposing {STRVAR_1 1, 0, 0}’s fatigue\nis weighing it down!
 {STRVAR_1 1, 0, 0} is itchy!
-The wild {STRVAR_1 1, 0, 0} is\ntoo itchy to move!
-The opposing {STRVAR_1 1, 0, 0} is\nitchy!
-{STRVAR_1 1, 0, 0} is hurt by\nthe itchy!
-The wild {STRVAR_1 1, 0, 0} is scratching\nthemselves hard!
-The opposing {STRVAR_1 1, 0, 0} is hurt\nby the scratching!
+The wild {STRVAR_1 1, 0, 0} is itchy!
+The opposing {STRVAR_1 1, 0, 0} is itchy!
+{STRVAR_1 1, 0, 0} is hurt by\nthe itching!
+The wild {STRVAR_1 1, 0, 0} is hurt by\nthe itching!
+The opposing {STRVAR_1 1, 0, 0} is hurt\nby the itching!
 {STRVAR_1 1, 0, 0} became scared!
 The wild {STRVAR_1 1, 0, 0}\nbecame scared!
 The opposing {STRVAR_1 1, 0, 0}\nbecame scared!
@@ -1671,9 +1671,6 @@ The opposing {STRVAR_1 1, 0, 0} is\nidolizing {STRVAR_1 1, 1, 0}!
 {STRVAR_1 1, 0, 0} snapped out\nof its idolizing!
 The wild {STRVAR_1 1, 0, 0} snapped\nout of its idolizing!
 The opposing {STRVAR_1 1, 0, 0} snapped\nout of its idolizing!
-{STRVAR_1 1, 0, 0}’s fatigue is\nweighing it down!
-The wild {STRVAR_1 1, 0, 0}’s fatigue\nis weighing it down!
-The opposing {STRVAR_1 1, 0, 0}’s fatigue\nis weighing it down!
 {STRVAR_1 1, 0, 0}’s allergies are\nacting up!
 The wild {STRVAR_1 1, 0, 0}’s allergies\nare acting up!
 The opposing {STRVAR_1 1, 0, 0}’s allergies\nare acting up!
@@ -1682,7 +1679,7 @@ The wild {STRVAR_1 1, 0, 0} can’t move!\nIt’s idolizing {STRVAR_1 1, 1, 0}!
 The opposing {STRVAR_1 1, 0, 0} can’t move!\nIt’s idolizing {STRVAR_1 1, 1, 0}!
 {STRVAR_1 1, 0, 0} is awestruck!
 The wild {STRVAR_1 1, 0, 0}\nis too\nawestruck to move!
-The opposing {STRVAR_1 1, 0, 0}is too\nawestruck to move!
+The opposing {STRVAR_1 1, 0, 0} is too\nawestruck to move!
 {STRVAR_1 1, 0, 0} shook off\nthe awe!
 The wild {STRVAR_1 1, 0, 0} got\nahold of itself!
 The opposing {STRVAR_1 1, 0, 0} got\nahold of itself!
@@ -1693,5 +1690,15 @@ The opposing {STRVAR_1 1, 0, 0}\nhas a migraine!
 The wild {STRVAR_1 1, 0, 0} is hurt\nby its migraine!
 The opposing {STRVAR_1 1, 0, 0} is hurt\nby its migraine!
 {STRVAR_1 0, 0, 0} could not see its target!
-{STRVAR_1 0, 0, 0} was too distracted to aim!
+{STRVAR_1 0, 0, 0} was too itchy to aim!
 {STRVAR_1 0, 0, 0} was too winded to follow through!
+{STRVAR_1 1, 0, 0}’s migraine\nfaded!
+The wild {STRVAR_1 1, 0, 0}’s migraine\nfaded!
+The opposing {STRVAR_1 1, 0, 0}’s migraine\nfaded!
+{STRVAR_1 0, 0, 0} was too scared to move!
+{STRVAR_1 1, 0, 0}’s fatigue
+lifted!
+The wild {STRVAR_1 1, 0, 0}’s fatigue
+lifted!
+The opposing {STRVAR_1 1, 0, 0}’s fatigue
+lifted!

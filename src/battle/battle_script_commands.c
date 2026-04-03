@@ -5026,6 +5026,7 @@ BOOL btl_scr_cmd_116_clearcondition3(void *bw, struct BattleStruct *sp) {
     sp->battlemon[battler].awestruck_turns = 0;
     sp->battlemon[battler].migraine_turns  = 0;
     sp->battlemon[battler].idolize_turns   = 0;
+    sp->battlemon[battler].fatigue_turns   = 0;
     return FALSE;
 }
 
